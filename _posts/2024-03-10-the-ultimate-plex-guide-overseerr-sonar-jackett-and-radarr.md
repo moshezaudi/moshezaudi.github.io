@@ -6,6 +6,7 @@ description: Plex guide to Overseerr, Sonarr, Jackett, and Radarr for seamless m
 tags: plex, overseerr, sonarr, jackett, radarr
 categories: technology, entertainment
 pretty_table: true
+thumbnail: assets/img/posts/1/pink-living-room.jpg
 toc:
   - name: Introduction
   - name: Important Disclaimer
