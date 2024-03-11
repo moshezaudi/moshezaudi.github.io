@@ -235,205 +235,182 @@ We will now proceed with configuring each application through the browser.
 
 ### Jackett Setup
 
-1. Open a browser and visit `http://<jackket_ip>:9117`
-2. Click on "Add Indexers"
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/jackett-screenshot-06.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+<ol>
+    <li>Open a browser and visit <code>http://&lt;jackket_ip:9117&gt;</code></li>
+    <li>Click on "Add Indexers"</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/jackett-screenshot-06.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-Search for any indexers you want and add them. I will add the YTS indexer for movies and the EZTV indexer for TV shows.
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/jackett-screenshot-03.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>
+        Search for any indexers you want and add them. I will add the YTS indexer for movies and the EZTV indexer for TV shows.
+    </li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/jackett-screenshot-03.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-Click on the settings icon and then click "Okay."
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/jackett-screenshot-02.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Click on the settings icon and then click "Okay."</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/jackett-screenshot-02.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-After adding the desired indexers, Jackett should look like this:
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/jackett-screenshot-01.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>After adding the desired indexers, Jackett should look like this:</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/jackett-screenshot-01.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
+</ol>
 
 ---
 
 ### qBittorrent Setup
 
-1. Open a web browser and enter `http://<qbittorrent_ip>:8080`.
-2. Log in using the default credentials: username `admin` and password `adminadmin`.
-3. Click on "Tools" and then select "Options".
-4. Ensure that separate folders are set up for downloading and saving files. In the Downloads tab, designate `/mnt/plex/downloading` as the location for incomplete torrents and `/mnt/plex/torrents` for completed torrents. Make sure to enable the option to keep incomplete torrents in a different path. Save the changes.
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/qBittorrent-screenshot-02.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<ol>
+    <li>Open a web browser and enter <code>http://&lt;qbittorrent_ip&gt;:8080</code>.</li>
+    <li>Log in using the default credentials: username <code>admin</code> and password <code>adminadmin</code>.</li>
+    <li>Click on "Tools" and then select "Options".</li>
+    <li>Ensure that separate folders are set up for downloading and saving files. In the Downloads tab, designate <code>/mnt/plex/downloading</code> as the location for incomplete torrents and <code>/mnt/plex/torrents</code> for completed torrents. Make sure to enable the option to keep incomplete torrents in a different path. Save the changes.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/qBittorrent-screenshot-02.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-To optimize the performance of our qBittorent application and manage downloads more efficiently, we will now activate torrent queueing and seeding. Navigate to the BitTorrent tab and enable these features. This will help prevent overloading the container with downloads and ensure that rate limits are handled effectively.
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/qBittorrent-screenshot-01.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>To optimize the performance of our qBittorent application and manage downloads more efficiently, we will now activate torrent queueing and seeding. Navigate to the BitTorrent tab and enable these features. This will help prevent overloading the container with downloads and ensure that rate limits are handled effectively.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/qBittorrent-screenshot-01.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-Ensure you have saved all changes before proceeding to the next step.
+    <li>Ensure you have saved all changes before proceeding to the next step.</li>
+</ol>
 
 ---
 
 ### Plex Setup
 
-1. Open a web browser and enter `http://<plex_ip>:32400/web`.
-2. Navigate through the initial basic welcome and account setup.
-3. Click on the settings icon and then under "Manage" select "Libraries".
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/plex-screenshot-05.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<ol>
+    <li>Open a web browser and enter <code>http://&lt;plex_ip&gt;:32400/web</code>.</li>
+    <li>Navigate through the initial basic welcome and account setup.</li>
+    <li>Click on the settings icon and then under "Manage" select "Libraries".</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/plex-screenshot-05.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-Click on "Add Library".
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/plex-screenshot-04.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Click on "Add Library".</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/plex-screenshot-04.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-Choose "Movies" and click "Next".
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/plex-screenshot-03.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Choose "Movies" and click "Next".</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/plex-screenshot-03.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-Enter the path `/mnt/plex/torrents/` and click "Add".
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/plex-screenshot-02.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Enter the path <code>/mnt/plex/torrents/</code> and click "Add".</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/plex-screenshot-02.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-Finally, click on "Add Library" to finish adding the library.
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/plex-screenshot-01.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Finally, click on "Add Library" to finish adding the library.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/plex-screenshot-01.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-Repeat the same steps for adding TV shows to your Plex library.
+    <li>Repeat the same steps for adding TV shows to your Plex library.</li>
+</ol>
 
 ---
 
 ### Sonarr Setup
 
-1. Open a web browser and enter `http://<sonarr_ip>:8989`.
-2. Navigate to the settings, then select "Indexers" and click on the plus icon to add a new indexer.
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-01.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<ol>
+    <li>Open a web browser and enter <code>http://&lt;sonarr_ip&gt;:8989</code>.</li>
+    <li>Navigate to the settings, then select "Indexers" and click on the plus icon to add a new indexer.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-01.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-3. Select "Torznab" and continue
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-03.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Select "Torznab" and continue.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-03.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-4. Now, we will need to retrieve the API Key and “Torznab Feed” URL for the EZTV Indexer from Jackett.
-5. Go ahead and copy these details, then paste them into the corresponding fields as shown below.
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/jackett-screenshot-07.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Now, retrieve the API Key and “Torznab Feed” URL for the EZTV Indexer from Jackett.</li>
+    <li>Go ahead and copy these details, then paste them into the corresponding fields as shown below.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/jackett-screenshot-07.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-02.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-02.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-6. Next, we will continue by selecting all the TV categories or only the specific ones we want.
-7. Be sure to click "Test" before saving.
-8. Next, Navigate to the settings, then select "Download Clients" and click on the plus icon to add a new download client.
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-04.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Next, select all the TV categories or only the specific ones we want. Be sure to click "Test" before saving.</li>
+    <li>Navigate to the settings, then select "Download Clients" and click on the plus icon to add a new download client.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-04.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-9. Select "qBittorrent" and continue
-
-<div class="row mt-3"><div class="col-sm mt-3 mt-md-0">{% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-05.png" class="img-fluid rounded z-depth-1" zoomable=true %}</div></div>
-
-10. In the form that has been opened, enter the qBittorrent IP address in the "Host" field, and then provide the username, password, and categories accordingly. (The default username and password are `admin` and `adminadmin`.)
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-06.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Select "qBittorrent" and continue.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-05.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-11. Be sure to click "Test" before saving.
-
-12. Next, Navigate to the settings, then select "Connect" and click on the plus icon to add a new connection.
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-07.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>In the form that has been opened, enter the qBittorrent IP address in the "Host" field, and then provide the username, password, and categories accordingly. (The default username and password are <code>admin</code> and <code>adminadmin</code>.) Be sure to click "Test" before saving.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-06.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-13. Select "Plex Media Server"
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-08.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Be sure to click "Test" before saving.</li>
+    <li>Next, Navigate to the settings, then select "Connect" and click on the plus icon to add a new connection.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-07.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-14. Fill in the host with your Plex IP address, and click authenticate with Plex TV
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-09.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Select "Plex Media Server".</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-08.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-15. Be sure to click "Test" before saving.
-
-16. For the final step within Sonarr, Navigate to the settings, click “Media Management” check the box “Rename Episodes” and then click on “Add Root Folder”
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-10.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Fill in the host with your Plex IP address, and click authenticate with Plex TV.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-09.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-17. Add the path `/mnt/plex/torrents/` and click ok.
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-11.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Be sure to click "Test" before saving.</li>
+    <li>For the final step within Sonarr, navigate to the settings, click “Media Management” check the box “Rename Episodes” and then click on “Add Root Folder”.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-10.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-Make sure everything is saved and Sonarr is ready to go.
+    <li>Add the path <code>/mnt/plex/torrents/</code> and click ok.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-11.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
+    </div>
+    <li>Make sure everything is saved and Sonarr is ready to go.</li>
+</ol>
 
 ---
 
@@ -445,71 +422,58 @@ We will set up Radarr in the same way we set up Sonarr, as they are essentially 
 
 ### Overseerr Setup
 
-1. Open a web browser and enter `http://<overseerr_ip>:5055`.
-2. Log in with your Plex account.
-3. Configure Plex settings by adding the Plex IP address and save the changes.
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-07.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<ol>
+    <li>Open a web browser and enter <code>http://&lt;overseerr_ip&gt;:5055</code>.</li>
+    <li>Log in with your Plex account.</li>
+    <li>Configure Plex settings by adding the Plex IP address and save the changes.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-07.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-4. In the Plex Libraries section, enable the "Movies" and "TV Shows" options, then click on "Continue".
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-06.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>In the Plex Libraries section, enable the "Movies" and "TV Shows" options, then click on "Continue".</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-06.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-5. Proceed to click on "Add Sonarr Server".
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-05.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Proceed to click on "Add Sonarr Server".</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-05.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-6. Select the "Default Server" option, and fill in the required fields for "Server Name", "IP Address", and "API Key".
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-04.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Select the "Default Server" option, and fill in the required fields for "Server Name", "IP Address", and "API Key".</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-04.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-The Sonarr API key can be found under "Settings" > "General". Simply copy the key.
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-12.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>The Sonarr API key can be found under "Settings" > "General". Simply copy the key.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-12.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-7. Click the test button to load existing profiles.
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-02.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Click the test button to load existing profiles.</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-02.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-8. Customize the "Quality Profile" as needed, designate `/mnt/plex/torrents` as the root folder, select "Deprecated" for the Language Profile (as it is mandatory), and click on "Add server".
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-01.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <li>Customize the "Quality Profile" as needed, designate <code>/mnt/plex/torrents</code> as the root folder, select "Deprecated" for the Language Profile (as it is mandatory), and click on "Add server".</li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-01.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-08.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-08.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
-</div>
-
-Repeat the same process for adding the Radarr server, and you'll be all set to start using the service.
+    <li>Repeat the same process for adding the Radarr server, and you'll be all set to start using the service.</li>
+</ol>
 
 ---
 
