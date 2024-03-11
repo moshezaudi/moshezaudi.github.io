@@ -358,7 +358,7 @@ We will now proceed with configuring each application through the browser.
             {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-02.png" class="img-fluid rounded z-depth-1" zoomable=true %}
         </div>
     </div>
-    <li>Next, select all the TV categories or only the specific ones we want. Be sure to click "Test" before saving.</li>
+    <li>Next, select all the TV categories or only the specific ones you want. Be sure to click "Test" before saving.</li>
     <li>Navigate to the settings, then select "Download Clients" and click on the plus icon to add a new download client.</li>
     <div class="row mt-3">
         <div class="col-sm mt-3 mt-md-0">
@@ -377,7 +377,6 @@ We will now proceed with configuring each application through the browser.
             {% include figure.liquid loading="eager" path="assets/img/posts/1/sonarr-screenshot-06.png" class="img-fluid rounded z-depth-1" zoomable=true %}
         </div>
     </div>
-    <li>Be sure to click "Test" before saving.</li>
     <li>Next, Navigate to the settings, then select "Connect" and click on the plus icon to add a new connection.</li>
     <div class="row mt-3">
         <div class="col-sm mt-3 mt-md-0">
@@ -443,7 +442,7 @@ We will set up Radarr in the same way we set up Sonarr, as they are essentially 
             {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-05.png" class="img-fluid rounded z-depth-1" zoomable=true %}
         </div>
     </div>
-    <li>Select the "Default Server" option, and fill in the required fields for "Server Name", "IP Address", and "API Key".</li>
+    <li>Check the "Default Server" option, and fill in the "Server Name", "IP Address", and "API Key" fields.</li>
     <div class="row mt-3">
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-04.png" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -461,7 +460,7 @@ We will set up Radarr in the same way we set up Sonarr, as they are essentially 
             {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-02.png" class="img-fluid rounded z-depth-1" zoomable=true %}
         </div>
     </div>
-    <li>Customize the "Quality Profile" as needed, designate <code>/mnt/plex/torrents</code> as the root folder, select "Deprecated" for the Language Profile (as it is mandatory), and click on "Add server".</li>
+    <li>Choose a "Quality Profile" from the drop-down menu (you can customize it in Sonarr if needed), designate <code>/mnt/plex/torrents</code> as the root folder, select "Deprecated" for the Language Profile (as it is mandatory), and click on "Add server".</li>
     <div class="row mt-3">
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.liquid loading="eager" path="assets/img/posts/1/overseerr-screenshot-01.png" class="img-fluid rounded z-depth-1" zoomable=true %}
