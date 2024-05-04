@@ -5,7 +5,7 @@ date: 2024-05-04
 description: Exploring the Sophisticated Potential of VNC for Phishing Attacks
 tags: phishing attacks, cyber threats, information security, hacking techniques, malicious activities
 categories: Hacking, Internet Security
-thumbnail: TBA
+thumbnail: assets/img/posts/2/purple-hacker.jpg
 toc:
   - name: Introduction
   - name: Important Disclaimer
