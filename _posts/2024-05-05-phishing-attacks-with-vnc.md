@@ -18,19 +18,21 @@ toc:
 
 ### Introduction
 
-On February 19, 2022, Mr. d0x a cybersecurity researcher introduced a method that uses VNC for phishing attacks. I was impressed by the cleverness of this idea.
+On February 19, 2022, [Mr. d0x](https://twitter.com/mrd0x) a cybersecurity researcher introduced a method that uses VNC for phishing attacks. I was impressed by the cleverness of this idea.
 
 ### Background
 
 VNC, or Virtual Network Computing, is a way to share screens and control another computer remotely. It works by installing a VNC server on the computer you want to control, and a VNC viewer on the device you're using to control it.
 
-The goal is to share our screen, specifically our browser window, and make the victim believe they are controlling their own browser when they are actually connected to our computer.
+Using VNC in a phishing attack is straightforward. We set up a VNC server, share our screen, specifically our browser window, and trick the victim into believing they are controlling their own browser while they are actually connected to our browser, allowing us to intercept any data that passes.
 
-By using a library called [noVNC](https://novnc.com/info.html), we can connect to VNC servers from modern web browsers. This phishing technique has several benefits over traditional phishing methods:
+Using a library called [noVNC](https://novnc.com/), we can establish connections to VNC servers through modern web browsers.
+
+This phishing technique has several benefits over traditional phishing methods:
 
 - We can record all keystrokes made by the victim
 - We can watch in real-time what the victim is doing on a website
-- Two-factor authentication will not protect against this type of attack
+- Regular Two-factor authentication will not protect against this type of attack
 
 ### Important Disclaimer
 
