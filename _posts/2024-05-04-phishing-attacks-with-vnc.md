@@ -2,17 +2,15 @@
 layout: distill
 title: Phishing Attacks with VNC
 date: 2024-05-04
-description: TBA
-tags: tag, tag
-categories: TBA
-pretty_table: true
+description: Exploring the Sophisticated Potential of VNC for Phishing Attacks
+tags: phishing attacks, cyber threats, information security, hacking techniques, malicious activities
+categories: Hacking, Internet Security
 thumbnail: TBA
 toc:
   - name: Introduction
   - name: Important Disclaimer
   - name: Security Context
   - name: PoC
-  - name: Conclusions
   - name: Credits
 ---
 
@@ -34,6 +32,8 @@ This phishing technique has several benefits over traditional phishing methods:
 - We can watch in real-time what the victim is doing on a website
 - Regular Two-factor authentication will not protect against this type of attack
 
+---
+
 ### Important Disclaimer
 
 The information provided is for educational purposes only. I do not take responsibility for any actions taken based on the information provided.
@@ -46,7 +46,7 @@ Please note that the PoC demonstrated in this guide is not safe for "production"
 
 ### Prerequisites
 
-- Linux
+- Linux machine that is fully updated
 
 ---
 
@@ -83,15 +83,14 @@ Now, we need to obtain the ID of the running Firefox process:
 Once we have obtained the window ID of Firefox using `xwininfo`, we can start a local VNC server by running:
 
 ```bash
-sudo apt update
 sudo apt install x11vnc
 x11vnc -id <window_id>
 ```
 
-Once we have started the local VNC server, we can use the screenkey tool to view key presses by the victim in real time. It is important to note that screenkey will display our own key presses as well.
+Once we have started the local VNC server, we can use the `screenkey` tool to view key presses by the victim in real time. It is important to note that `screenkey` will display our own key presses as well.
 
 ```bash
-sudo apt install screenkey -y
+sudo apt install screenkey
 screenkey
 ```
 
