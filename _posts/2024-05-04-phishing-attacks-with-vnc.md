@@ -3,7 +3,7 @@ layout: distill
 title: Phishing Attacks with VNC
 date: 2024-05-04
 description: Exploring the Sophisticated Potential of VNC for Phishing Attacks
-tags: phishing attacks, cyber threats, information security, hacking techniques, malicious activities
+tags: phishing-attacks, cyber-threats, information-security, hacking-techniques, malicious-activities
 categories: Hacking, Internet Security
 thumbnail: assets/img/posts/2/purple-hacker.jpg
 toc:
