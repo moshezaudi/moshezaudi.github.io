@@ -95,9 +95,11 @@ sudo apt install screenkey -y
 screenkey
 ```
 
-#### Victim
+### Victim
 
-Almost there! The last step is to have the victim open their browser and enter the following URL: `http://<ip>:8080/vnc.html?autoconnect=true`. Once they enter this URL, they will see what looks like the Google accounts login page. Little do they know, it's actually a live streaming video that they can interact with. It's a pretty sneaky and clever trick.
+Fantastic! Our phishing setup is all set and can now be accessed through the following URL: `http://<ip>:8080/vnc.html?autoconnect=true`
+
+As soon as a victim visits this URL, they will see what looks like the Google accounts login page. Little do they know, it's actually a live streaming video that they can interact with. It's a pretty sneaky and clever trick.
 
 {% include figure.liquid loading="eager" path="assets/img/posts/2/4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
