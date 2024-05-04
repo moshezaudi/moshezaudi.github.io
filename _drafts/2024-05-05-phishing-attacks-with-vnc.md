@@ -48,14 +48,13 @@ Please note that the PoC demonstrated in this guide is not safe for "production"
 
 ---
 
-
 # PoC
 
 First we lachnge Firefox, or any other browser in kiosk mode.
 
 so, first what is kiosk mode?
 
-Kiosk software is the system and user interface software designed for an interactive kiosk or Internet kiosk enclosing the system in a way that prevents user interaction and activities on the device outside the scope of execution of the netkiosk. 
+Kiosk software is the system and user interface software designed for an interactive kiosk or Internet kiosk enclosing the system in a way that prevents user interaction and activities on the device outside the scope of execution of the netkiosk.
 
 Why do need kiosk mode?
 
@@ -98,4 +97,4 @@ screenkey
 
 Now all left to do is open up the the browser from the vicitm and enter the following url: `http://<ip>:8080/vnc.html?autoconnect=true`
 
-When  the vicitim will enter this url he will see the google accounts login page, without knowing it is a streaming video that he can interact with, this is crazy! 
+When the vicitim will enter this url he will see the google accounts login page, without knowing it is a streaming video that he can interact with, this is crazy!
