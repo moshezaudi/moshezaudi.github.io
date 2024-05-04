@@ -52,8 +52,6 @@ Please note that the PoC demonstrated in this guide is not safe for "production"
 
 ### PoC
 
-#### Firefox
-
 First, we launch Firefox or any other browser in kiosk mode with the website we want to phish. For this example, we will use Google accounts.
 
 Kiosk mode is a feature that can restrict user activities and interactions outside the intended scope of operation, this is necessary to prevent the victim from controlling other areas of our attacking machine, which may lead to unwanted access or control.
@@ -64,8 +62,6 @@ In the terminal, execute:
 firefox --kisok https://accounts.google.com
 ```
 
-#### noVNC
-
 Now, in a new terminal window, we will run a noVNC server:
 
 ```bash
@@ -75,8 +71,6 @@ cd noVNC
 ```
 
 {% include figure.liquid loading="eager" path="assets/img/posts/2/2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-
-#### VNC
 
 Now, we need to obtain the ID of the running Firefox process:
 
@@ -94,11 +88,9 @@ sudo apt install x11vnc
 x11vnc -id <window_id>
 ```
 
-#### Keystroke Logger
-
 Once we have started the local VNC server, we can use the screenkey tool to view key presses by the victim in real time. It is important to note that screenkey will display our own key presses as well.
 
-```
+```bash
 sudo apt install screenkey -y
 screenkey
 ```
@@ -108,3 +100,7 @@ screenkey
 Almost there! The last step is to have the victim open their browser and enter the following URL: `http://<ip>:8080/vnc.html?autoconnect=true`. Once they enter this URL, they will see what looks like the Google accounts login page. Little do they know, it's actually a live streaming video that they can interact with. It's a pretty sneaky and clever trick.
 
 {% include figure.liquid loading="eager" path="assets/img/posts/2/4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+
+### Credits
+
+[Steal Credentials & Bypass 2FA Using noVNC](https://mrd0x.com/bypass-2fa-using-novnc/) (mr.d0x, 2020)
